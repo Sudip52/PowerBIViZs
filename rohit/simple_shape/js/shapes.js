@@ -74,12 +74,32 @@ svg.selectAll( "line" )
   .attr( "y2", function ( d, i ) {
     return 300 + ( i * 20 );
   } );
-// var newX = 600;/
-// svg.selectAll( "ellipse" )
-//   .data( dataArray )
-//   .enter().append( "ellipse" )
-//   .attr( "cx", function ( d, i ) {
-//     newX + =
-//   } )
-//   .attr( "cy", "300" )
-//   .attr( "r", )
+
+
+var textArray = [ 'start', 'middle', 'end' ]
+
+svg.append( "text" ).selectAll( "tspan" )
+  .data( textArray )
+  .enter().append( "tspan" )
+  .attr( "x", newX )
+  .attr( "y", function ( d, i ) {
+    return ( 390 + i * 20 );
+  } )
+  .attr( "fill", "none" )
+  .attr( "stroke", "blue" )
+  .attr( "stroke-width", "2" )
+  .attr( "font-size", "30" )
+  .attr( "text-anchor", "start" )
+  .attr( "dominant-baseline", "bottom" )
+  .text( function ( d ) {
+    return d;
+  } );
+
+
+svg.append( "line" )
+  .attr( "x1", newX )
+  .attr( "y1", 390 )
+  .attr( "x2", newX )
+  .attr( "y2", 430 )
+  .attr( "stroke", "green" )
+  .attr( "stroke-width", 2 )
