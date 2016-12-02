@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+        "module": "system",
+//        "target": "es5",
+//        "noImplicitAny": false,
+//        "removeComments": true,
+    //    "preserveConstEnums": true,
+//    "outFile": "./js/bundle.js",
+//    "outDir": "./js",
+//    "sourceMap": true
+    //    "noEmitOnError": true,
+        "experimentalDecorators": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
+
+
